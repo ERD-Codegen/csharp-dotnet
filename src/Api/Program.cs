@@ -1,7 +1,6 @@
 ﻿using Microsoft.OpenApi.Models;
 using Realworlddotnet.Api.Features.Articles;
 using Realworlddotnet.Api.Features.Profiles;
-using Realworlddotnet.Api.Features.Tags;
 using Realworlddotnet.Api.Features.Users;
 using Realworlddotnet.Core.Repositories;
 
@@ -34,7 +33,6 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddScoped<IConduitRepository, ConduitRepository>();
 builder.Services.AddScoped<IUserHandler, UserHandler>();
 builder.Services.AddScoped<IArticlesHandler, ArticlesHandler>();
-builder.Services.AddScoped<ITagsHandler, TagsHandler>();
 builder.Services.AddScoped<IProfilesHandler, ProfilesHandler>();
 builder.Services.AddSingleton<CertificateProvider>();
 
