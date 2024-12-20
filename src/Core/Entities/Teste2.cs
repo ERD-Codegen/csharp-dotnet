@@ -15,5 +15,9 @@ namespace Core.Entities
 
         [Column("updated_at")]
         public DateTime UpdatedAt { get; set; }
+
+        [Column("year")]
+        [Range(-2147483650, 0, ErrorMessage = "Year must be greater than -2147483650 and less than or equal to 0")]
+        public int? Year { get; set; }
     }
 }
